@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+    <head>
+        <title>Contact Form</title>
+        <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
+    />
+        <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
+    </head>
+    <body styles="background-color:'red'">
+        <form method="POST" action="{% url 'index'%}"">
+           {% csrf_token %}
+           <textarea name="message" placeholder="message..."></textarea>
+           <input type="submit">
+        </form>
+    </body>
+</html>
